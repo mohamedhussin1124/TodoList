@@ -55,3 +55,4 @@ function getlocalStorages(nameStorage) {
     let stor = localStorage.getItem(nameStorage)
     return stor
 }
+getlocalStorages("locStorage")
