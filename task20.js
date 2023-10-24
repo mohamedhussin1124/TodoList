@@ -23,7 +23,8 @@ const listContener = document.getElementById("listContener")
         span.innerHTML = "\u00d7"
         Lists.appendChild(span)
         inputBox.value = ""
-        setlocalStorages(listContener.innerHtml)
+        setlocalStorages(listContener.innerHTML)
+        
     }
     })
 
@@ -33,16 +34,16 @@ listContener.addEventListener("click", (e) => {
         {
             e.target.classList.add("item-checked")
             e.target.classList.remove("item-unchecked")
-            setlocalStorages(listContener)
+            setlocalStorages(listContener.innerHTML)
         }
         else{
             e.target.classList.add("item-unchecked")
             e.target.classList.remove("item-checked")
-            setlocalStorages(listContener)
+            setlocalStorages(listContener.innerHTML)
         }
     } else if (e.target.tagName === "SPAN") {
         e.target.parentElement.remove()
-        setlocalStorages(listContener)
+        setlocalStorages(listContener.innerHTML)
     }
 }, false)
 
@@ -55,4 +56,4 @@ function getlocalStorages(nameStorage) {
     let stor = localStorage.getItem(nameStorage)
     return stor
 }
-getlocalStorages("locStorage")
+listContener.innerHTML = getlocalStorages("locStorage")
