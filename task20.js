@@ -23,7 +23,7 @@ const listContener = document.getElementById("listContener")
         span.innerHTML = "\u00d7"
         Lists.appendChild(span)
         inputBox.value = ""
-        setlocalStorages(listContener)
+        setlocalStorages(listContener.innerHtml)
     }
     })
 
