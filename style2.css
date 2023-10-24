@@ -1,0 +1,73 @@
+.box{
+    width: 500px;
+    margin:  70px auto 70px;
+    padding: 20px;
+}
+.box .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.box .title img{
+    width: 30px;
+    display: inline-block;
+}
+.box .title h2{
+    margin-left: 20px;   
+    text-shadow: 5px 5px 17px rgb(138, 79, 79);
+}
+
+.items-show .list-group-item{
+    border: 0;
+    cursor: pointer;
+    padding: 12px 8px 12px 50px;
+    margin-top: 5px;
+    
+}
+.items-show .item-checked{
+    text-decoration: line-through;
+}
+.items-show .item-checked , .items-show .item-unchecked{
+     position: relative;
+}
+.items-show .item-checked::before{
+    content: "";
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50% !important;
+    background-image: url(./assets/imges/cheked.jpg) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+
+.items-show .item-unchecked::before{
+    content: "";
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50% !important;
+    background-image: url(./assets/imges/uncecked.png) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+ul li span:hover{
+    color: #000000;
+}
